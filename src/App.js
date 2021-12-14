@@ -129,6 +129,14 @@ const App = () => {
     },
   ])
 
+  const [ryansThings, setRyansThings] = useState([
+    {
+      name: "pokeball",
+      image: "",
+      attributes: ["portable", "compact", "colorful", "comfortable"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
