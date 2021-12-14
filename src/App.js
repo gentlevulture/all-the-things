@@ -6,6 +6,7 @@ import FunctionalThings from './pages/FunctionalThings/FunctionalThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
+import FaithfulThings from './pages/FaithfulThings/FaithfulThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -132,8 +133,18 @@ const App = () => {
   const [ryansThings, setRyansThings] = useState([
     {
       name: "pokeball",
-      image: "",
+      image: "https://images.unsplash.com/photo-1610692567145-2c1fe6bf9c3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1072&q=80",
       attributes: ["portable", "compact", "colorful", "comfortable"],
+    },
+    {
+      name: "master sword",
+      image: "https://i.imgur.com/mSbog2i.jpeg",
+      attributes: ["sharp", "shiny", "powerful", "legendary"],
+    },
+    {
+      name: "super mushroom",
+      image: "https://images.unsplash.com/photo-1527896573815-b7dd74893deb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      attributes: ["tasty", "hidden", "empowering"]
     },
   ])
 
@@ -156,6 +167,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-faithful-things"
+        element={<FaithfulThings things={ryansThings}/>}
       />
     </Routes>
   )
