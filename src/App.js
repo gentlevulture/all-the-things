@@ -8,6 +8,7 @@ import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
 import FaithfulThings from './pages/FaithfulThings/FaithfulThings'
 import MemeThings from './pages/MemeThings/MemeThings'
+import SamuraiThings from './pages/SamuraiThings/SamuraiThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -157,6 +158,64 @@ const App = () => {
     },
   ])
 
+  const [eppiesThings, setEppiessThings] = useState([
+    {
+      name: 'Katana',
+      image: 'https://i.imgur.com/oAYEHQO.jpeg',
+      attributes: [
+        'gift',
+        'given to me by my Little Brother',
+        'sharp',
+        'effective'
+      ],
+    },
+    
+    {
+      name: 'Musashi',
+      image:
+        'https://i.imgur.com/cHHH8ob.jpeg',
+      attributes: [
+        'written by Eiji Yoshikawa',
+        'defeats Arima Kihei who was armed with a wakizashi in first dual with a quarterstaff, at 13',
+        'defeats Sasaki Kojiro after sleeping in during a scheduled dual, being woken by a servant of Kojiro only to eat a full breakfast before carving a bokken from a the oar of a ship in order to really wake himself up, then cleaving the skull Kojiro after both their weapons met in the first strokes of their dual, the headband of Mushashi falling to ground having been sliced by the three-shaku nodachi of Sasaki',
+        'neuralgia attacks led him, at 59 years, to retire to Reigando cave as a hermit where he would write The Book of Five Rings, finished in 1645, and die at 62',
+      ],
+    },
+    {
+      name: 'Toshiro Mifune Collection',
+      image:
+        'https://i.imgur.com/fzhbeNz.jpeg',
+      attributes: [
+        'pirated',
+        'Yojimbo series',
+        'first two films directed by Akira Kurosawa',
+        '1961-1983',
+      ],
+    },
+    {
+      name: 'Lone Wolf and Cub',
+      image:
+        'https://i.imgur.com/0bgX9zD.jpeg',
+      attributes: [
+        'Sword of Vengance',
+        'Baby Cart of Hades',
+        'Baby Cart at The River Styx',
+        'Baby Cart in Peril',
+      ],
+    },
+    
+    {
+      name: 'Ghost of Tsushima',
+      image: 'https://i.imgur.com/LVsuATE.jpeg',
+      attributes: [
+        'PS4 ',
+        'Sucker Punch',
+        'Sony Interactive',
+        '1 player or 2-4 network players'
+      ],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -184,7 +243,11 @@ const App = () => {
       <Route
         path="/the-meme-things"
         element={<MemeThings things={mikesThings} />}
-   />
+      />
+      <Route
+        path="/the-samurai-things"
+        element={<SamuraiThings things={eppiesThings} />}
+      />
     </Routes>
   )
 }
