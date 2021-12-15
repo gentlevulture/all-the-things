@@ -7,6 +7,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
 import FaithfulThings from './pages/FaithfulThings/FaithfulThings'
+import MemeThings from './pages/MemeThings/MemeThings'
 
 const App = () => {
   const [shahzadsThings, setShazadsThings] = useState([
@@ -148,6 +149,14 @@ const App = () => {
     },
   ])
 
+  const [mikesThings, setMikesThings] = useState([
+    {
+      name: "git meme",
+      image: "https://miro.medium.com/max/1000/0*yItQ1DiR5PLcd94T.jpg",  
+      attributes: ["funny", "real", "not a taco", "good movie"],
+    },
+  ])
+
   return (
     <Routes>
       {/* All the <Route> components should live here */}
@@ -172,6 +181,10 @@ const App = () => {
         path="/the-faithful-things"
         element={<FaithfulThings things={ryansThings}/>}
       />
+      <Route
+        path="/the-meme-things"
+        element={<MemeThings things={mikesThings} />}
+   />
     </Routes>
   )
 }
